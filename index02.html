@@ -7,10 +7,22 @@
 
 <body>
     <script>
-        const cart =['kindle Fire HD 10',19980,1];
+    const user = ['田中太郎','佐藤一郎','山田次郎','伊藤花子']
+    
+    user.forEach (name=> {
         
-        console.log(cart.length);
-
+        switch(name){
+        case '田中太郎':
+            console.log(name +'は営業部　第一課です');
+            break;
+        case '山田次郎':
+            console.log(name +'は製造部　生産管理課です');
+            break;
+        default:
+        console.log(name+ 'は該当データがありません。');
+        }
+    })
+   
     </script>
     
 </body>
