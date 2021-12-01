@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+       <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta charset="UTF-8">
+      <title>サンプルデモ</title>
+    </head>
+    <body>
+        <form name="myForm">
+          <label>名前:<input type="text" name="name"/></label>
+          
+          <br>
+          <label>メールアドレス:<input type="email" name="email"/></label>
+          
+          <br>
+          
+          <label>年齢:</label>
+          <input type="radio" name="age" value="20" />20代
+          <input type="radio" name="age" value="30" />30代
+          <input type="radio" name="age" value="40" />40代
+          <input type="radio" name="age" value="50" />50代
+          
+          <br><br>
+          
+          <label>普段使っているスマホは？</label></br>
+          <input type="checkbox" name="phone" value="iphone"/>iphone
+          <input type="checkbox" name="phone" value="android"/>android
+          <input type="checkbox" name="phone" value="flip-phone"/>ガラケー
+          <input type="checkbox" name="phone" value="other"/>その他
+
+        </form>
+        <br>
+    
+        <button id=btn>実行</btton>
+        </div>
+        
+   
+      <script>
+      const btn=document.getElementById('btn');
+      btn.addEventListener('click',()=>{
+          const form=document.forms.myForm;
+          console.log(form.name.value);
+          console.log(form.email.value);
+          console.log(form.age.value);
+          
+          form.phone.forEach(item=>{
+              if(item.checked) console.log(item.value)
+          })
+      })
+      
+    
+      </script>
+    </body>
+</html>

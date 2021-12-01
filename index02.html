@@ -7,22 +7,20 @@
 
 <body>
     <script>
-    const user = ['田中太郎','佐藤一郎','山田次郎','伊藤花子']
+  const product=['テレビ','冷蔵庫','机','スマホ','本棚','椅子','テーブル'];
+  
+  const search=(item,target)=>{
+      const result=item.filter(item=>item===target);
+ if(result.length){
+     return '商品が見つかりました';
     
-    user.forEach (name=> {
-        
-        switch(name){
-        case '田中太郎':
-            console.log(name +'は営業部　第一課です');
-            break;
-        case '山田次郎':
-            console.log(name +'は製造部　生産管理課です');
-            break;
-        default:
-        console.log(name+ 'は該当データがありません。');
-        }
-    })
-   
+ }else{
+    return 'お探しの商品は見つかりませんでした';
+    
+ }
+     
+ }
+ console.log(search(product,'スマホ'));
     </script>
     
 </body>

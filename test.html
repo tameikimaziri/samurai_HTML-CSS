@@ -6,11 +6,39 @@
     </head>
     <body>
       <script>
-        let myString = 'ユーザー名';
-    
-        myString = '太郎';
-    
-        console.log('ようこそ、' + myString + 'さん');
+      const promise1=()=>{
+          return new Promise(resolve=>{
+              setTimeout(()=>{
+                  resolve('1つ目の処理が完了');
+              },2000)
+          })
+      }
+         const promise2=()=>{
+          return new Promise(resolve=>{
+              setTimeout(()=>{
+                  resolve('2つ目の処理が完了');
+              },2000)
+          })
+      }
+         const promise3=()=>{
+          return new Promise(resolve=>{
+              setTimeout(()=>{
+                  resolve('3つ目の処理が完了');
+              },2000)
+          })
+      }
+      promise1()
+      .then(deta=>{
+          console.log(deta);
+          return promise2();
+      })
+         .then(deta=>{
+          console.log(deta);
+          return promise3();
+      })
+      .then(deta=>console.log(deta))
+ 
+ 
       </script>
     </body>
 </html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+       <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta charset="UTF-8">
+    </head>
+    <body>
+      <script>
+      class charactr {
+  constructor(name, hp,) {
+      this.name= name;
+      this.hp= hp;
+  }
+  attack(){
+      console.log(this.name +'の攻撃!!');
+      
+  }
+}
+class Hero extends charactr{
+    constructor(name,hp,exp){
+        super(name,hp);
+        this.exp=exp;
+        
+    }
+    
+    
+    control(){}
+    
+    superAttack(){}
+    
+    speak(){}
+}
+
+class Enemy extends charactr{
+    dropItem(){}
+    
+    getPoint(){}
+}
+
+const hero= new Hero('主人公',100,10);
+console.log(hero);
+
+const enemy= new Enemy('敵',10)
+
+hero.attack()
+enemy.attack()
+
+    
+
+
+    </script>
+    </body>
+</html>

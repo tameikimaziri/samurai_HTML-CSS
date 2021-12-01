@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+       <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta charset="UTF-8">
+    </head>
+    <body>
+      <script>
+class Animal {
+  constructor(name, age) {
+     this.name = name;
+     this.age = age;
+  }
+}
+class Cat extends Animal{
+    constructor(name,age,type){
+        super(name,age);
+        this.type=type;
+    }
+speak(){
+    console.log(this.name+'が「にゃーん」と鳴きました！');
+}
+    
+}
+
+const cat=new Cat('ぽち',4,'シャム');
+cat.speak();
+
+
+        
+
+
+    
+
+
+    </script>
+    </body>
+</html>
